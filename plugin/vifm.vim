@@ -96,7 +96,8 @@ function! s:StartVifm(mods, count, editcmd, ...) abort
 	    \ '+command DiffVim   :let $VIFM_OPEN_TYPE=''vert diffsplit''' . edit,
 	    \ '+command TabVim    :let $VIFM_OPEN_TYPE='''.s:tab_drop_cmd."'" . edit,
 	    \ '+noremap <C-v>     :VsplitVim<CR>',
-	    \ '+noremap <C-x>     :SplitVim<CR>']
+	    \ '+noremap <C-x>     :SplitVim<CR>',
+	    \ '+noremap <Esc>     :q<CR>']
 	call map(pickargs, 'shellescape(v:val, 1)')
 	let pickargsstr = join(pickargs, ' ')
 
